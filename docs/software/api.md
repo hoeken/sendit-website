@@ -2,7 +2,7 @@
 layout: default
 title: API & Integrations
 parent: Software
-nav_order: 2
+nav_order: 3
 ---
 
 # API & Integrations

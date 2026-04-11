@@ -1,19 +1,17 @@
 ---
 layout: default
-title: Operation
+title: Configuration
 parent: Software
-nav_order: 3
+nav_order: 2
 ---
 
-# Operation
+# Configuration
 
 You can access the firmware at [http://sendit.local](http://sendit.local) ([http://sendit](http://sendit) on Android) or by entering the IP address.  The IP address and hostname are printed out over the serial port at startup.  You should see an interface similar to this:
 
 ![SendIt]({{ 'assets/sendit ui.png' | relative_url }})
 
-## Initial Configuration
-
-Open the web UI and go to Settings -> ADC Channels page.  There you can edit each channel's configuration.  Most of these settings are self-explanatory, but we will cover some details of each below.
+Go to Settings -> ADC Channels page.  There you can edit each channel's configuration.  Most of these settings are self-explanatory, but we will cover some details of each below.  Here is an example water tank sensor configuration:
 
 ![SendIt]({{ 'assets/sendit channel config.png' | relative_url }})
 
@@ -51,11 +49,10 @@ It has a built in 'Live Average' so that you can get a stable reading during you
 
 `Raw Input` is the reading from the ADC channel and `Calibrated` is the value to output.  SendIt will use linear interpolation between values, so if your sensor is non-linear then you will need multiple data points for a smooth and reliable output.
 
-![SendIt]({{ 'assets/sendit calibration table.png' | relative_url }})
+Here is an example calibration table from a water tank sensor:
 
+![SendIt]({{ 'assets/sendit calibration table.png' | relative_url }})
 
 ## Usage
 
-Once SendIt is configured, there is not much interaction needed.  You will want to set up either MQTT, SignalK, or some other custom method of polling the sensor values.
-
-From there you can integrate into Home Assistant, Node-RED, or whatever other uses you have for the final sensor data.
+Once SendIt is configured, there is not much interaction needed.  You will want to set up MQTT, SignalK, or some other custom method of polling the sensor values.  [See more on the Integration page]({{ '/docs/software/operation' | relative_url }}).
