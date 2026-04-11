@@ -4,9 +4,12 @@ title: Overview
 nav_order: 1
 ---
 
-# ADC Input Multitool
+# SendIt - ADC Input Multitool
 
 ## Hardware
+
+<a href="assets/SendIt Rev C Vertical.jpg"><img src="assets/SendIt Rev C Vertical.jpg" alt="SendIt Rev C" style="float: right; margin: 0 0 1em 1.5em; width: 180px;"></a>
+
 - 8 channel ADC input (ADS1115)
 - 5 input type circuits, selectable by jumper:
   - 4-20ma sensor
