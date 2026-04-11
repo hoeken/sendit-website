@@ -9,8 +9,8 @@ nav_order: 1
 
 ## Features
 
-<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/docs/hardware/revision-c"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid"></a></div>
-<div class="d-block d-md-none mb-3"><a href="/docs/hardware/revision-c"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid w-100"></a></div>
+<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/assets/SendIt Rev C Assembled.jpg"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid"></a></div>
+<div class="d-block d-md-none mb-3"><a href="/assets/SendIt Rev C Assembled.jpg"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid w-100"></a></div>
 
 - ESP32-S3 module with WiFi and USB-C  
 - 12–30 V DC input with onboard power regulation  
