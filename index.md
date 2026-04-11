@@ -27,6 +27,9 @@ nav_order: 1
 - QWIIC and GPIO expansion port
 
 ## User Interface
+
+<a href="assets/sendit ui.png"><img src="assets/sendit ui.png" alt="SendIt UI" style="float: right; margin: 0 0 1em 1.5em; width: 180px;"></a>
+
 - Local HTML5 web interface served directly from the ESP32  
 - Fast, mobile-friendly design  
 - Works on phones, laptops, and supported MFDs  
