@@ -55,4 +55,6 @@ Here is an example calibration table from a water tank sensor:
 
 ## Usage
 
-Once SendIt is configured, there is not much interaction needed.  You will want to set up MQTT, SignalK, or some other custom method of polling the sensor values.  [See more on the Integration page]({{ '/docs/software/operation' | relative_url }}).
+Once SendIt is configured, there is not much interaction needed.  You will want to set up MQTT, SignalK, or some other custom method of polling the sensor values.
+
+[See more on the API & Integrations page]({{ '/docs/software/api' | relative_url }}).
