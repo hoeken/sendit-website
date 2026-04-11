@@ -9,7 +9,7 @@ nav_order: 3
 
 You can access the firmware at [http://sendit.local](http://sendit.local) ([http://sendit](http://sendit) on Android) or by entering the IP address.  The IP address and hostname are printed out over the serial port at startup.  You should see an interface similar to this:
 
-![SendIt]({{ 'assets/sendit-ui.png' | relative_url }})
+![SendIt]({{ 'assets/sendit ui.png' | relative_url }})
 
 ## Initial Configuration
 
