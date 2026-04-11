@@ -1,0 +1,31 @@
++ Kicad File Preparation
+
+- Install the Kicad `Fabrication Toolkit` plugin.
+- From the PCB Editor, open `Tools -> External Plugins -> Fabrication Toolkit`
+- Click `Generate` to create the production files.
+- Upload the .zip file in the first step of the JLC ordering process
+- the bom.csv file is the Bill of Materials
+- the positions.csv file is the Component Placement file
+
++ JLCPCB Ordering Options
+
+If no option is specified, use the default options provided by JLCPCB.
+
+++ PCB
+
+* PCB Color: Blue
+* Surface Finish: ENIG
+
+++ Assembly
+
+* Depanel Boards: YES
+* PCBA Remark - attach image below
+* PCBA Remark
+
+```
+After production, insert the following parts:
+INPUT6 - LCSC C5188249
+INPUT1-INPUT5, INPUT7-INPUT9 - LCSC C5188250
+```
+
+![SendIt]({{ 'assets/SendIt Rev C Manufacturing.png' | relative_url }})
