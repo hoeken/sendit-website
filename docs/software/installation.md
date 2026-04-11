@@ -7,15 +7,24 @@ nav_order: 1
 
 # Firmware Installation
 
-## First Time Connection
+<a href="assets/provisioning.png"><img src="assets/provisioning.png" alt="Provisioning UI" style="float: right; margin: 0 0 1em 1.5em; width: 300px;"></a>
+
+## Upload Firmware
+
+If your board does not come pre-programmed, you will need to upload the firmware.
 
 1. Open the [Firmware Helper](https://firmware.sendit.yarrboard.com) page
-1. Select your board version, firmware version and upload
-1. Enter your wifi credentials using serial or Bluetooth
+1. Select your board revision
+1. Select your firmware version
+1. Click Install Firwmare
+1. Select your serial port, click upload
+
+## WiFi Provisioning
+
+1. Open the [Firmware Helper](https://firmware.sendit.yarrboard.com) page
+1. Select either `Configure via BLE` or `Configure via Serial`
+1. Enter your WiFi credentials
 1. Open browser to [http://sendit.local](http://sendit.local)
-1. Update your board settings, such as login info, name, etc.
-1. Install SignalK + signalk-yarrboard-plugin and configure
-1. Setup any Node-RED flows and custom logic you want.
 
 ## Firmware Update Methods
 
