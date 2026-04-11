@@ -30,7 +30,7 @@ nav_order: 1
 
 ## Voltage Options
 
-SendIt has 4 different supply voltages available that can be selected by using jumper shunts on a per-channel basis:
+SendIt has 4 different supply voltages available that can be selected by using a jumper shunt on a per-channel basis:
 
 - 24v (max 150mA total) usually for powering 4-20mA sensors
 - 5v (max 500mA total)
@@ -50,6 +50,9 @@ Revision C supports the following hardware measurement types:
 - Raw ADC input
 - 10k pullup to 3.3v
 - 0-5v input
+
+{: .warning }
+You must install jumpers on both top and bottom measurement settings.  Make sure you have selected the same setting for both top and bottom.
 
 ### 4-20ma Transducers / Senders
 
