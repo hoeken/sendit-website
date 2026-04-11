@@ -9,7 +9,7 @@ nav_order: 1
 
 ## Upload Firmware
 
-<div class="d-none d-md-block float-end ms-3 mb-3" style="width: 300px;"><a href="https://firmware.sendit.yarrboard.com"><img src="{{ 'assets/provisioning.png' | relative_url }}" alt="Provisioning UI" class="img-fluid"></a></div>
+<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="https://firmware.sendit.yarrboard.com"><img src="{{ 'assets/provisioning.png' | relative_url }}" alt="Provisioning UI" class="img-fluid"></a></div>
 <div class="d-block d-md-none mb-3"><a href="https://firmware.sendit.yarrboard.com"><img src="{{ 'assets/provisioning.png' | relative_url }}" alt="Provisioning UI" class="img-fluid w-100"></a></div>
 
 If your board does not come pre-programmed, you will need to upload the firmware.
@@ -19,20 +19,20 @@ If your board does not come pre-programmed, you will need to upload the firmware
 1. Select your firmware version
 1. Click **Install Firmware**
 1. Select your serial port, click upload
-1. Board will reboot, beep, and status will show as <span class="label label-blue">BLUE</span> on success
+1. Board will reboot, beep, and status will show as <span class=".bg-blue-000 .text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">BLUE</span> on success
 
 ## WiFi Provisioning
 
 1. Power your board through USB or external power.
-	* The status led should show as <span class="label label-blue">BLUE</span>
+	* The status led should show as <span  class=".bg-blue-000 .text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">BLUE</span>
 1. Open the [Firmware Helper](https://firmware.sendit.yarrboard.com) page
 1. Select either **Configure via BLE** or **Configure via Serial**
 1. Enter your WiFi credentials
-	* Status led will turn <span class="label label-green">GREEN</span> on success
+	* Status led will turn <span class=".bg-green-000 .text-grey-lt-000"style="border-radius:12px;padding:0.1em 0.5em;">GREEN</span> on success
 1. Open browser to [http://sendit.local](http://sendit.local)
 
 {: .note }
-If your WiFi changes or the board cannot connect to WiFi, the status led will turn <span class="label label-red">RED</span>  You can hold the **BOOT** button for 10 seconds to switch back into provisioning mode.
+If your WiFi changes or the board cannot connect to WiFi, the status led will turn <span class=".bg-red-000 .text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">RED</span>  You can hold the **BOOT** button for 10 seconds to switch back into provisioning mode.
 
 ## Firmware Update Methods
 
