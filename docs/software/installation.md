@@ -24,12 +24,12 @@ If your board does not come pre-programmed, you will need to upload the firmware
 ## WiFi Provisioning
 
 1. Power your board through USB or external power.
-	* The status led should show as <span class="bg-blue-000 text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">BLUE</span>
+	* The status led should show as <span class="bg-blue-000 text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">BLUE</span> (ready to pair)
 1. Open the [Firmware Helper](https://firmware.sendit.yarrboard.com) page
 1. Select either **Configure via BLE** or **Configure via Serial**
 1. Enter your WiFi credentials
-	* Status led will turn <span class="bg-green-000 text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">GREEN</span> on success
-1. Open browser to [http://sendit.local](http://sendit.local)
+	* Status led will turn <span class="bg-green-000 text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">GREEN</span> on success.
+1. Open your browser to [http://sendit.local](http://sendit.local)
 
 {: .note }
 If your WiFi changes or the board cannot connect to WiFi, the status led will turn <span class="bg-red-000 text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">RED</span>  You can hold the **BOOT** button for 10 seconds to switch back into provisioning mode.
