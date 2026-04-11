@@ -136,7 +136,7 @@ If no option is specified below, use the default options provided by JLCPCB.
 
 * Depanel Boards: YES
 * PCBA Remark - attach image below
-* PCBA Remark
+* PCBA Remark - add the text below
 
 ```
 After production, insert the following parts:
