@@ -6,25 +6,20 @@ nav_order: 1
 
 # SendIt - ADC Input Multitool
 
-## Hardware
-
 <a href="assets/SendIt Rev C Vertical.jpg"><img src="assets/SendIt Rev C Vertical.jpg" alt="SendIt Rev C" style="float: right; margin: 0 0 1em 1.5em; width: 180px;"></a>
 
-- 8 channel ADC input (ADS1115)
-- 5 input type circuits, selectable by jumper:
-  - 4-20ma sensor
-  - 0-30v input
-  - 0-5v input
-  - 10k pullup
-  - Raw input
-- Per-channel supply voltage:
-  - 24v
-  - 5v
-  - 3.3v
-  - External Power
-- Built-in 24v power supply for 4-20ma sensors
-- Powered by USB or 12-30v external input
-- QWIIC and GPIO expansion port
+SendIt is an open-hardware, open-firmware controller designed as a multi use tool for handling various inputs with a focus on DIY marine usage.  It runs on the Yarrboard Framework and provides a clean web UI for configuration, and multiple different APIs for accessing your data.
+
+Built on the **ESP32-S3**, SendIt has 8 channels of 16-bit ADC with 5 different types of configurable input circuits.  With this board, each channel can be individually configured to handle these types of inputs:
+
+* **4-20ma Transducers/Senders:** sender between +VE and GND
+* **Positive Switching:** 0-32v, voltage divider acts as pulldown when NC, switch between SIGNAL and +VE
+* **Negative Switching:** 1k ohm, top half of voltage divider acts as pullup, switch between SIGNAL and GND
+* **0-32v:** simple voltage divider, voltage wired to SIGNAL
+* **0-10k ohm:** voltage divider, external resistor wired from SIGNAL to GND
+* **0-5v:** simple voltage divider, voltage wired to SIGNAL
+* **Thermistor:** 0-10k ohm, wired as normal
+* **Raw/Passthrough:** no extra circuitry - wire your own custom circuit
 
 ## User Interface
 

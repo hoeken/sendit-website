@@ -13,7 +13,7 @@ SendIt hardware is fully open source and licensed under the **Open Hardware Lice
 
 ## Revisions
 
-- [Revision C]({{ '/docs/hardware/revision-c' | relative_url }}) — latest version
+- [Revision C]({{ '/docs/hardware/revision-c' | relative_url }}) — latest version, production ready
 - Revision B — prototype
 - Revision A — prototype
 
