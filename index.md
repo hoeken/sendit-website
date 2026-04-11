@@ -12,14 +12,15 @@ SendIt is an open-hardware, open-firmware controller designed as a multi use too
 
 Built on the **ESP32-S3**, SendIt has 8 channels of 16-bit ADC with 5 different types of configurable input circuits.  With this board, each channel can be individually configured to handle these types of inputs:
 
-* **4-20ma Transducers/Senders:**
-* **Positive Switching:**
-* **Negative Switching:**
-* **0-32v:**
-* **0-10k ohm:**
-* **0-5v:**
-* **Thermistor:**
-* **Raw ADC:**
+* 4-20ma Transducers/Senders
+* 240-30 ohm / 0-180 ohm senders
+* Positive Switching
+* Negative Switching
+* 0-32v Input
+* 0-5v Input
+* 0-10k ohm resistance
+* Thermistors
+* Raw ADC Input
 
 ## User Interface
 
@@ -32,10 +33,8 @@ Built on the **ESP32-S3**, SendIt has 8 channels of 16-bit ADC with 5 different 
 - Web based UI config - no manually editing config files  
 
 ## Integrations
-- MQTT publishing
+- MQTT
 - SignalK 
 - Home Assistant
 - HTTP/REST endpoints  
 - WebSocket real-time control
-
-### Example User Interface
