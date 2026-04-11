@@ -8,12 +8,10 @@ nav_order: 3
 # API & Integrations
 
 ## MQTT
-Publishes all available information:
-- Raw reading  
-- Calibrated reading
-- etc.
+Publishes all available information under topic: `yarrboard/sendit/adc/{id|key}`
 
-Under topic: `yarrboard/sendit/*`
+- Raw reading / voltage
+- Calibrated reading
 
 ### Home Assistant
 
@@ -22,9 +20,8 @@ To use SendIt with Home Assistant, follow these steps:
 * Install the Mosquitto Broker (MQTT server) app in Home Assistant.
 * Enable MQTT discovery in Home Assistant
 * In SendIt, enable MQTT and the Home Assistant features
+* In SendIt, select a Home Assistant sensor type for each channel (optional)
 * In Home Assistant, it should show the discovered SendIt board and each channel
-
-**TODO: add link to dashboard YAML here**
 
 ## Raw API
 
@@ -39,7 +36,7 @@ The protocol works over the following transport layers:
 
 Since SendIt is not interactive, the most useful command is 'get_update' to get the latest readings:
 
-```
+```javascript
 {"cmd": "get_update"}
 ```
 
@@ -47,4 +44,4 @@ Visit the [YarrboardFramework documentation](https://github.com/hoeken/Yarrboard
 
 ## SignalK
 
-//todo: signalk support isnt really setup yet.
+SignalK support is not finished yet, so is currently best to setup a NodeRED flow to subscribe to a MQTT topic, do any unit conversions needed, and then publish that to a SignalK path.

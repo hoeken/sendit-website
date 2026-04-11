@@ -21,7 +21,7 @@ All hardware design files (schematics, layout, gerbers, and BOM) are available o
 
 ## Build It Yourself
 
-SendIt is fully open source, so you can order and assemble the PCB yourself. The easiest way to do this is through [JLCPCB](https://jlcpcb.com).  Our boards are designed with manufacturing with JLC in mind and have LCSC part numbers for all parts.
+SendIt is fully open source, so you can order and assemble the PCB yourself. The easiest way to do this is through [JLCPCB](https://jlcpcb.com).  Our boards are designed for manufacturing with JLC in mind and have LCSC part numbers for all parts.
 
 ## Buy a Assembled Unit
 

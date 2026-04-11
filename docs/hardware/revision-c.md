@@ -43,7 +43,7 @@ Each channel has a 30mA resettable fuse on the supply voltage.
 
 SendIt has 5 different measurement types that can be selected by using jumper shunts to configure the board on a per-channel basis.
 
-Revision C supports the following hardware measurement types:
+Revision C has the following built-in hardware measurement circuits:
 
 - 4-20ma sensors
 - 0-32v input
@@ -59,7 +59,7 @@ You must install jumpers on both top and bottom measurement settings.  Make sure
 4-20mA senders are very common sensors for a variety of applications.
 
 1. Select an appropriate voltage for your sender.  24v is fairly standard.
-1. Select `420` as your measurement type.
+1. Select **420** as your measurement type.
 1. Wire your sender with the positive/supply wire to +VE and the negative/return wire to SIGNAL
 
 {: .note }
@@ -69,42 +69,43 @@ If you need to need to power a large number of 4-20mA sensors, it is best to pro
 
 Resistive senders are commonly used as tank level sensors for water and fuel tanks.  You will need an external 150 ohm resistor to build this circuit.  Larger resistor values also work, but reduce the accuracy slightly.  1k is probably about the maximum you would want to use.
 
-1. Select '3.3v' as your voltage
-1. Wire your resistor between +VOLAGE and SIGNAL
-1. Wire your sender between SIGNAL and GROUND
+1. Select **3.3v** as your voltage
+1. Wire your resistor between **+VOLTAGE** and **SIGNAL**
+1. Wire your sender between **SIGNAL** and **GROUND**
 
 ### Positive Switching
 
-1. Select either `3.3v` or `24v` as your voltage
-1. Select either `5.0v` or `32v` as your measurement type, depending on the voltage that is being switched.
-1. Wire your switch between +VOLTAGE and SIGNAL
+1. Select either **3.3v** or **24v** as your voltage
+1. Select either **5.0v** or **32v** as your measurement type, depending on the voltage that is being switched.
+1. Wire your switch between **+VOLTAGE** and **SIGNAL**
 
 ### Negative Switching
 
-1. Select `10K` as your measurement type.
-1. Wire your switch between SIGNAL and GND
+1. Select **10K** as your measurement type.
+1. Wire your switch between **SIGNAL** and **GND**
 
 ### 0-32v Input
 
-1. Select `32v` as your measurement type
-1. Wire your voltage to SIGNAL and ground to GROUND
+1. Select **32v** as your measurement type
+1. Wire your voltage to **SIGNAL** and ground to **GROUND**
 
 ### 0-5v Input
 
-1. Select `5v` as your measurement type
-1. Wire your voltage to SIGNAL and ground to GROUND
+1. Select **5v** as your measurement type
+1. Wire your voltage to **SIGNAL** and ground to **GROUND**
 
 ### Thermistor
 
-1. Select `10K` as your measurement type
-1. Wire your thermistor between SIGNAL and GROUND
+1. Select **10K** as your measurement type
+1. Wire your thermistor between **SIGNAL** and **GROUND**
 
 ### Custom Circuit
 
-You can connect directly to the ADC pin of the ADS1115 with your own custom circuit if needed.  The ADS1115 is configured to measure from 0-2.048v.  Do not exceed 3.3v on this pin, or you risk damaging the board.
+You can connect your own analog signal directly to the ADC pin of the ADS1115 if needed.  The ADS1115 is configured to measure from 0-2.048v by default.  Do not exceed 3.3v on this pin, or you risk damaging the board.
 
-1. Select 'RAW' as your measurement type
+1. Select **RAW** as your measurement type
 1. Wire your sensor as needed.
+1. If you have a higher voltage, consider using the 0-5v circuit instead.
 
 ## Source Files
 
@@ -122,12 +123,12 @@ If you would like to manufacture your own boards, follow the instructions below:
 
 ## Kicad File Preparation
 
-- Install the Kicad `Fabrication Toolkit` plugin.
-- From the PCB Editor, open `Tools -> External Plugins -> Fabrication Toolkit`
-- Click `Generate` to create the production files.
-- Upload the {board_name}.zip file in the first step of the JLC ordering process
-- {board_name}_bom.csv file is the Bill of Materials for PCBA
-- {board_name}_positions.csv file is the Component Placement file for PCBA
+- Install the Kicad **Fabrication Toolkit** plugin.
+- From the PCB Editor, open **Tools -> External Plugins -> Fabrication Toolkit**
+- Click **Generate** to create the production files.
+- Upload the **{board_name}.zip** file in the first step of the JLC ordering process
+- **{board_name}_bom.csv** file is the Bill of Materials for PCBA
+- **{board_name}_positions.csv** file is the Component Placement file for PCBA
 
 ## JLCPCB Ordering Options
 
