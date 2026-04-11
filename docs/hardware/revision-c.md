@@ -106,6 +106,12 @@ You can connect directly to the ADC pin of the ADS1115 with your own custom circ
 1. Select 'RAW' as your measurement type
 1. Wire your sensor as needed.
 
+## Source Files
+
+* [SendIt Github Repository](https://github.com/hoeken/sendit)
+* [SendIt Rev C Schematic](https://github.com/hoeken/sendit/blob/main/schematics/SendIt%20Rev%20C%20Schematic.pdf)
+* [3D Printable Case](https://github.com/hoeken/sendit/blob/main/cases/SendIt%20Rev%20B%20Case.step)
+
 ## Software Settings
 
 After you have selected your hardware settings and wired up your sensors, you need to [set the appropriate settings]({{ '/docs/software/operation' | relative_url }}) in software to let SendIt know how to interpret the readings.
