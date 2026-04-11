@@ -9,6 +9,8 @@ has_children: true
 
 [![Kicad Layout]({{ 'assets/sendit-rev-c layout.png' | relative_url }})]({{ '/docs/hardware/revision-c' | relative_url }})
 
+[![Assembled Board]('/assets/SendIt Rev C Horizontal.jpg')]({{ '/docs/hardware/revision-c' | relative_url }})
+
 ## Revisions
 
 - [Revision C]({{ '/docs/hardware/revision-c' | relative_url }}) — latest version, production ready

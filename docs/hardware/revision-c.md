@@ -8,6 +8,10 @@ nav_order: 1
 # SendIt Revision C
 
 ## Features
+
+<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/docs/hardware/revision-c"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid"></a></div>
+<div class="d-block d-md-none mb-3"><a href="/docs/hardware/revision-c"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid w-100"></a></div>
+
 - ESP32-S3 module with WiFi and USB-C  
 - 12–30 V DC input with onboard power regulation  
 - Can be powered by USB C or external power input
@@ -31,7 +35,7 @@ nav_order: 1
 ## Voltage Options
 
 <div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/assets/SendIt Rev C Voltage Select.jpg"><img src="/assets/SendIt Rev C Voltage Select.jpg" alt="SendIt Board Voltage Select" class="img-fluid"></a></div>
-<div class="d-block d-md-none mb-3"><a href="/assets/SendIt Rev C Voltage Select.jpg"><img src="/assets/SendIt Rev C Voltage Select.jpg'" alt="SendIt Board Voltage Select" class="img-fluid w-100"></a></div>
+<div class="d-block d-md-none mb-3"><a href="/assets/SendIt Rev C Voltage Select.jpg"><img src="/assets/SendIt Rev C Voltage Select.jpg" alt="SendIt Board Voltage Select" class="img-fluid w-100"></a></div>
 
 SendIt has 4 different supply voltages available that can be selected by using a jumper shunt on a per-channel basis:
 
@@ -45,7 +49,7 @@ Each channel has a 30mA resettable fuse on the supply voltage.
 ## Measurement Options
 
 <div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/assets/SendIt Rev C Measurement Select.jpg"><img src="/assets/SendIt Rev C Measurement Select.jpg" alt="SendIt Board Measurement Select" class="img-fluid"></a></div>
-<div class="d-block d-md-none mb-3"><a href="/assets/SendIt Rev C Measurement Select.jpg"><img src="/assets/SendIt Rev C Measurement Select.jpg'" alt="SendIt Board Measurement Select" class="img-fluid w-100"></a></div>
+<div class="d-block d-md-none mb-3"><a href="/assets/SendIt Rev C Measurement Select.jpg"><img src="/assets/SendIt Rev C Measurement Select.jpg" alt="SendIt Board Measurement Select" class="img-fluid w-100"></a></div>
 
 SendIt has 5 different measurement types that can be selected by using jumper shunts to configure the board on a per-channel basis.
 

@@ -6,8 +6,8 @@ nav_order: 1
 
 # SendIt - ADC Input Multitool
 
-<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/docs/hardware/revision-c"><img src="assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid"></a></div>
-<div class="d-block d-md-none mb-3"><a href="/docs/hardware/revision-c"><img src="assets/SendIt Rev C Assembled.jpg'" alt="SendIt Board Assembled" class="img-fluid w-100"></a></div>
+<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/docs/hardware/revision-c"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid"></a></div>
+<div class="d-block d-md-none mb-3"><a href="/docs/hardware/revision-c"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid w-100"></a></div>
 
 SendIt is an open-hardware, open-firmware controller designed as a multi use tool for handling various inputs with a focus on DIY marine usage.  It runs on the Yarrboard Framework and provides a clean web UI for configuration, and multiple different APIs for accessing your data.
 
@@ -25,7 +25,8 @@ Built on the ESP32-S3, SendIt has 8 channels of 16-bit ADC with 5 different type
 
 ## User Interface
 
-<a href="assets/sendit ui.png"><img src="assets/sendit ui.png" alt="SendIt UI" style="float: right; margin: 0 0 1em 1.5em; width: 300px;"></a>
+<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/assets/sendit ui.png"><img src="/assets/sendit ui.png" alt="SendIt UI" class="img-fluid"></a></div>
+<div class="d-block d-md-none mb-3"><a href="/assets/sendit ui.png"><img src="/assets/sendit ui.png" alt="SendIt UI" class="img-fluid w-100"></a></div>
 
 - Local HTML5 web interface served from the ESP32  
 - Fast, mobile-friendly design  
