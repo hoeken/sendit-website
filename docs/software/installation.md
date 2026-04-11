@@ -7,7 +7,7 @@ nav_order: 1
 
 # Firmware Installation
 
-<a href="assets/provisioning.png"><img src="assets/provisioning.png" alt="Provisioning UI" style="float: right; margin: 0 0 1em 1.5em; width: 300px;"></a>
+<a href="https://firmware.sendit.yarrboard.com"><img src="{{ 'assets/sendit-rev-c layout.png' | relative_url }}" alt="Provisioning UI" style="float: right; margin: 0 0 1em 1.5em; width: 300px;"></a>
 
 ## Upload Firmware
 
