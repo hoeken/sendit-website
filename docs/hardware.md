@@ -7,9 +7,8 @@ has_children: true
 
 # Hardware
 
-[![Kicad Layout]({{ 'assets/sendit-rev-c layout.png' | relative_url }})]({{ '/docs/hardware/revision-c' | relative_url }})
-
-[![Assembled Board]('/assets/SendIt Rev C Horizontal.jpg')]({{ '/docs/hardware/revision-c' | relative_url }})
+[![Kicad Layout](assets/sendit-rev-c layout.png)](/docs/hardware/revision-c)
+[![Assembled Board](/assets/SendIt Rev C Horizontal.jpg)](/docs/hardware/revision-c)
 
 ## Revisions
 
