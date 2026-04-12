@@ -109,6 +109,21 @@ Resistive senders are commonly used as tank level sensors for water and fuel tan
 1. Select **10K** as your measurement type
 1. Wire your thermistor between **SIGNAL** and **GROUND**
 
+### Custom Input Voltage
+
+If you have a nonstandard input voltage that doesn't fit the 0-5v range, or the 0-32v range, you can use a custom voltage divider to translate your voltage into a range suitable for SendIt.
+
+1. Select your resistors using the [TI Voltage Divider Calculator](http://ti.com/download/kbase/volt/volt_div3.htm)
+  - **Input Voltage** - your maximum input voltage
+  - **Desired Output Voltage** - 2.048
+  - **Resistor Sequence** - E24 (more common)
+  - **Resistor Scale** - 10000
+1. Set your measurement type to **RAW**
+1. Wire up your custom voltage divider
+  - **R1** between **YOUR SENSOR** and **SIGNAL**
+  - **R2** between **SIGNAL** and **GROUND**
+  - **+VOLTAGE** and **GROUND** to your sensor as appropriate.
+
 ### Custom Circuit
 
 You can connect your own analog signal directly to the ADC pin of the ADS1115 if needed.  The ADS1115 is configured to measure from 0-2.048v by default.  Do not exceed 3.3v on this pin, or you risk damaging the board.
