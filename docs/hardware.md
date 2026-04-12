@@ -7,7 +7,7 @@ has_children: true
 
 # Hardware
 
-[![Kicad Layout](assets/sendit-rev-c layout.png)](/docs/hardware/revision-c)
+[![Kicad Layout](/assets/sendit-rev-c layout.png)](/docs/hardware/revision-c)
 [![Assembled Board](/assets/SendIt Rev C Horizontal.jpg)](/docs/hardware/revision-c)
 
 ## Revisions

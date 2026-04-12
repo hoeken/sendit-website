@@ -125,7 +125,7 @@ You can connect your own analog signal directly to the ADC pin of the ADS1115 if
 
 ## Software Settings
 
-After you have selected your hardware settings and wired up your sensors, you need to [set the appropriate settings]({{ '/docs/software/operation' | relative_url }}) in software to let SendIt know how to interpret the readings.
+After you have selected your hardware settings and wired up your sensors, you need to [set the appropriate settings](/docs/software/configuration) in software to let SendIt know how to interpret the readings.
 
 # Manufacturing
 
