@@ -17,14 +17,14 @@ aux_links:
 callouts:
   highlight:
     color: yellow
-  important:
-    title: Important
+  note:
+    title: Note
     color: blue
   new:
     title: New
     color: green
-  note:
-    title: Note
+  important:
+    title: Important
     color: purple
   warning:
     title: Warning
