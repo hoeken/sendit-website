@@ -77,7 +77,7 @@ If you need to need to power a large number of 4-20mA sensors, it is best to pro
 
 ### 240-30 ohm / 0-180 ohm / 0-190 ohm Senders
 
-Resistive senders are commonly used as tank level sensors for water and fuel tanks.  You will need an external 150 ohm resistor to build this circuit.  Larger resistor values also work, but reduce the accuracy slightly.  1k is probably about the maximum you would want to use.
+Resistive senders are commonly used as tank level sensors for water and fuel tanks.  You will need an external 150 ohm resistor to build this circuit.  Larger resistor values also work, but reduce the accuracy slightly.  1k is probably about the maximum you would want to use.  Use resistors with a tolerance of 1% or better and a minimum wattage of 1/10W (100mW)
 
 1. Select **3.3v** as your voltage
 1. Wire your resistor between **+VOLTAGE** and **SIGNAL**
@@ -119,7 +119,7 @@ If you have a nonstandard input voltage that doesn't fit the 0-5v range, or the 
   - **Resistor Sequence** - E24 (more common)
   - **Resistor Scale** - 10000
 1. Set your measurement type to **RAW**
-1. Wire up your custom voltage divider
+1. Wire up your custom voltage divider.  Use 1% resistors for best accuracy.
   - **R1** between **YOUR SENSOR** and **SIGNAL**
   - **R2** between **SIGNAL** and **GROUND**
   - **+VOLTAGE** and **GROUND** to your sensor as appropriate.
