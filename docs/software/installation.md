@@ -9,8 +9,7 @@ nav_order: 1
 
 ## Upload Firmware
 
-<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="https://firmware.sendit.yarrboard.com"><img src="{{ 'assets/provisioning.png' | relative_url }}" alt="Provisioning UI" class="img-fluid"></a></div>
-<div class="d-block d-md-none mb-3"><a href="https://firmware.sendit.yarrboard.com"><img src="{{ 'assets/provisioning.png' | relative_url }}" alt="Provisioning UI" class="img-fluid w-100"></a></div>
+<a href="https://firmware.sendit.yarrboard.com"><img src="/assets/provisioning.png" alt="Provisioning UI" class="img-right"></a>
 
 If your board does not come pre-programmed, you will need to upload the firmware.
 
