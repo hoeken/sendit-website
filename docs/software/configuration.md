@@ -17,9 +17,12 @@ Go to **Settings -> ADC Channels** page.  There you can edit each channel's conf
 
 ### Name / Key / Enabled
 
-Name is what is shown to the user, and key is used for things like MQTT and SignalK paths.  Disable is for turning off unused channels.
+Name is what is shown to the user, and key is used for API paths such as MQTT topics and SignalK paths.  The Enabled toggle controls whether a channel is active — disable unused channels to hide them from the dashboard and exclude them from API output.
 
 ### Input Type
+
+{: .note }
+Before selecting an Input Type, make sure you have set the correct hardware jumper for that measurement circuit. See [Revision C Hardware](/docs/hardware/revision-c#measurement-options) for wiring and jumper instructions.
 
 Input type determines how SendIt interprets the reading from the ADC:
 
@@ -29,7 +32,7 @@ Input type determines how SendIt interprets the reading from the ADC:
 - **4-20mA Sensor** will translate the voltage into an amperage reading.
 - **0-32v Input** will translate the voltage into the range of 0-32v.
 - **0-5v Input** will translate the voltage into the range of 0-5v.
-- **10k Pullup** will translate the voltage into an ohm value in a voltage divider where R1 is 10k and R2 is the calculated value.
+- **10k Pullup** translates the voltage into a resistance value. The board has an internal 10k pull-up resistor (R1) to 3.3 V; the reported value is the resistance of whatever you have wired between SIGNAL and GND (R2) — such as a resistive sender or thermistor.
 
 ### Home Assistant Device Class
 
@@ -37,7 +40,7 @@ If you are using Home Assistant Integration, you can select which [device class]
 
 ### Running Average Window
 
-High values will smooth out your sensor readings, but make it slightly slower to respond.  Low values will cause it to be faster but possibly more noisy.  Maximum window of 10 seconds.
+High values will smooth out your sensor readings, but make it slightly slower to respond.  Low values will cause it to be faster but possibly more noisy.  Enter the window size in milliseconds (maximum: 10,000 ms / 10 seconds).
 
 ### Calibration Table
 
@@ -47,7 +50,7 @@ Calibration can be as simple as setting a 4-20ma sensor so that 4mA is 0% and 20
 
 It has a built in 'Live Average' so that you can get a stable reading during your calibration process.
 
-**Raw Input** is the reading from the ADC channel and **Calibrated** is the value to output.  SendIt will use linear interpolation between values, so if your sensor is non-linear then you will need multiple data points for a smooth and reliable output.
+**Raw Input** is the value after Input Type processing — for example, if your Input Type is **4-20mA Sensor**, the Raw Input column is in milliamps, not raw voltage. **Calibrated** is the final value to output after your mapping.  SendIt will use linear interpolation between values, so if your sensor is non-linear then you will need multiple data points for a smooth and reliable output.
 
 Here is an example calibration table from a water tank sensor:
 

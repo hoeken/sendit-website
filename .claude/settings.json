@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "Bash(grep -v \"^\\\\.github\" gh api \"repos/hoeken/sendit-firmware/contents/src\" --jq '.[].name')"
+    ]
+  }
+}

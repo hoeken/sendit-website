@@ -13,14 +13,12 @@ nav_order: 1
 <div class="d-block d-md-none mb-3"><a href="/assets/SendIt Rev C Assembled.jpg"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid w-100"></a></div>
 
 - ESP32-S3 module with WiFi and USB-C  
-- 12–30 V DC input with onboard power regulation  
-- Can be powered by USB C or external power input
+- Powered by USB-C or 12–30 V DC external input, with onboard power regulation
 - 8 x 16-bit ADC channels (ADS1115)
 - 5 input type circuits, selectable by jumper
 - Per-channel supply voltage: External / 24v / 5v / 3.3v
 - 30mA resettable fuse on sensor supply
 - Built-in 24v power supply for 4-20ma sensors
-- Powered by USB or 12-30v external input
 - I²C expansion (QWIIC connector)
 - Unused I/O broken out as 2.54mm pin headers
 
@@ -62,7 +60,7 @@ Revision C has the following built-in hardware measurement circuits:
 - 0-5v input
 
 {: .warning }
-You must install jumpers on both top and bottom measurement settings.  Make sure you have selected the same setting for both top and bottom.
+Each channel has two jumper positions to set measurement type — refer to the Measurement Select photo above. Install a jumper shunt on **both** positions (top and bottom) for the same measurement type. Mismatched jumpers will produce incorrect readings.
 
 ### 4-20ma Transducers / Senders
 
@@ -73,7 +71,9 @@ You must install jumpers on both top and bottom measurement settings.  Make sure
 1. Wire your sender with the positive/supply wire to +VE and the negative/return wire to SIGNAL
 
 {: .note }
-If you need to need to power a large number of 4-20mA sensors, it is best to provide an external power supply and select that as the supply voltage.  The 24v regulator on the board is somewhat small and may overheat.
+If you need to power a large number of 4-20mA sensors, it is best to provide an external power supply and select that as the supply voltage.  The 24v regulator on the board is somewhat small and may overheat.
+
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **4-20mA Sensor**.
 
 ### 240-30 ohm / 0-180 ohm / 0-190 ohm Senders
 
@@ -83,31 +83,51 @@ Resistive senders are commonly used as tank level sensors for water and fuel tan
 1. Wire your resistor between **+VOLTAGE** and **SIGNAL**
 1. Wire your sender between **SIGNAL** and **GROUND**
 
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **10k Pullup**, then use a calibration table to map ohm readings to your desired unit (e.g., percentage or liters).
+
 ### Positive Switching
 
 1. Select either **3.3v** or **24v** as your voltage
-1. Select either **5.0v** or **32v** as your measurement type, depending on the voltage that is being switched.
+1. Select the measurement type that matches the voltage range being switched:
+   - Use **5v** if the switched voltage is 5 V or below
+   - Use **32v** if the switched voltage is above 5 V (e.g., 12 V or 24 V systems)
 1. Wire your switch between **+VOLTAGE** and **SIGNAL**
+
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **Digital Input**.
 
 ### Negative Switching
 
 1. Select **10K** as your measurement type.
 1. Wire your switch between **SIGNAL** and **GND**
 
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **Digital Input**.
+
+{: .note }
+The **10K** measurement type is also used for thermistors. Both use a resistive element between SIGNAL and GND with the onboard 10k pull-up to form a voltage divider.
+
 ### 0-32v Input
 
 1. Select **32v** as your measurement type
 1. Wire your voltage to **SIGNAL** and ground to **GROUND**
+
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **0-32v Input**.
 
 ### 0-5v Input
 
 1. Select **5v** as your measurement type
 1. Wire your voltage to **SIGNAL** and ground to **GROUND**
 
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **0-5v Input**.
+
 ### Thermistor
 
 1. Select **10K** as your measurement type
 1. Wire your thermistor between **SIGNAL** and **GROUND**
+
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **Thermistor**.
+
+{: .note }
+The **10K** measurement type is also used for negative-switching inputs. See [Negative Switching](#negative-switching) above.
 
 ### Custom Input Voltage
 
@@ -124,6 +144,8 @@ If you have a nonstandard input voltage that doesn't fit the 0-5v range, or the 
   - **R2** between **SIGNAL** and **GROUND**
   - **+VOLTAGE** and **GROUND** to your sensor as appropriate.
 
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **Raw Output**, then use a calibration table to map the raw voltage to your desired unit.
+
 ### Custom Circuit
 
 You can connect your own analog signal directly to the ADC pin of the ADS1115 if needed.  The ADS1115 is configured to measure from 0-2.048v by default.  Do not exceed 3.3v on this pin, or you risk damaging the board.
@@ -132,11 +154,13 @@ You can connect your own analog signal directly to the ADC pin of the ADS1115 if
 1. Wire your sensor as needed.
 1. If you have a higher voltage, consider using the 0-5v circuit instead.
 
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **Raw Output**.
+
 ## Source Files
 
 * [SendIt Github Repository](https://github.com/hoeken/sendit)
 * [SendIt Rev C Schematic](https://github.com/hoeken/sendit/blob/main/schematics/SendIt%20Rev%20C%20Schematic.pdf)
-* [3D Printable Case](https://github.com/hoeken/sendit/blob/main/cases/SendIt%20Rev%20B%20Case.step)
+* [3D Printable Case](https://github.com/hoeken/sendit/blob/main/cases/SendIt%20Rev%20C%20Case.step)
 
 ## Software Settings
 
@@ -177,3 +201,41 @@ INPUT1-INPUT5, INPUT7-INPUT9 - LCSC C5188250
 ```
 
 ![SendIt Manufacturing Instructions]({{ 'assets/SendIt Rev C Manufacturing.png' | relative_url }})
+
+# Changelog
+
+## REV C
+
+### 🔧 ADC & Analog Front-End
+- Switched back to **ADS1115** ADC.
+- Removed the **ADC VREF circuit** and added a **solder jumper** for VREF selection.
+- Standardized all analog scaling to **2.048 V** reference (instead of 3.3 V).
+- Added voltage dividers for **30 V** and **5 V** input ranges.
+- Set **4–20 mA shunt resistor** to **100 Ω**.
+- Added **pull-up resistors** on ADS1115 ALERT pin.
+
+### ⚡ Power & Regulation
+- Added a **buck converter** on the EXT port for **12/24 V → 5 V** to power the ESP32.
+  - Includes a jumper to **enable/disable EXT-port power**.
+  - EXT port may now be used as **power-only**, **reference-only**, or **both**.
+- Added **3.3 V ↔ 5.0 V buffer** for WS2818 LED.
+- Switched to **green LEDs** for power indication.
+- Removed the **USB-to-serial** and **USB hub** for a simplified ESP32-S3 design.
+
+### 🧩 Connectors & I/O
+- Added **QWIIC header**.
+- Moved pluggable terminal blocks **down 0.5 mm**.
+- Removed jumper for EXT power selection.
+
+### 🧪 Test Points
+- Added test points for **3.3 V**, **5.0 V**, **24 V**, **GND**, **SDA**, **SCL**, and others.
+- Standardized all test points to **1.5×0.7 mm**.
+
+### 🔊 Piezo & Indicators
+- Switched to **passive piezo** and added diode (**Huaneng QMB-09B-03**).
+
+### 🧱 Mechanical & Layout
+- Changed upper mounting holes to **SMTSO3080CTJ** hardware.
+- Switched to **SMT boot/reset buttons**.
+- Removed RTC **clock crystal**.
+- Switched boost converter to **MT3608B** for 24 V generation.

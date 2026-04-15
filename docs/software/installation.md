@@ -26,7 +26,7 @@ If your board does not come pre-programmed, you will need to upload the firmware
 1. Power your board through USB or external power.
 	* The status led should show as <span class="bg-blue-000 text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">BLUE</span> (ready to pair)
 1. Open the [Firmware Helper](https://firmware.sendit.yarrboard.com) page
-1. Select either **Configure via BLE** or **Configure via Serial**
+1. Select either **Configure via BLE** (Bluetooth Low Energy) or **Configure via Serial** (USB cable)
 1. Enter your WiFi credentials
 	* Status led will turn <span class="bg-green-000 text-grey-lt-000" style="border-radius:12px;padding:0.1em 0.5em;">GREEN</span> on success.
 1. Open your browser to [http://sendit.local](http://sendit.local)
@@ -43,7 +43,7 @@ If your WiFi changes or the board cannot connect to WiFi, the status led will tu
 ## Development / Building From Source
 
 1. Clone the [firmware repository](https://github.com/hoeken/sendit-firmware)
-1. Run `npm install` in the repository to get some dev tools
+1. Run `npm install` in the repository root to install the build tooling (npm is used only for dev tooling — this is not a Node.js application)
 1. Plug your computer into the board
 1. Open the repository in VSCode
 1. Install the Platformio plugin if needed
@@ -58,7 +58,7 @@ This allows you to upload new firmware over wifi from VSCode.
 1. Edit **platformio.ini** and add this to the bottom of your desired board [env:] section
 
 ```
-; OTA Upload Config, auth password is your admin password
+; OTA Upload Config - replace "admin" with your board's admin password
 upload_protocol = espota
 upload_port = sendit.local
 upload_flags = 
