@@ -25,7 +25,7 @@ callouts:
     title: Warning
     color: red
 
-footer_content: "SendIt is open source: firmware under GPLv3, hardware under OHL."
+footer_content: "SendIt is open source: firmware under GPLv3, hardware under OHL.  Part of the <a href=\"https://yarrboard.com\">Yarrboard</a> ecosystem."
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
