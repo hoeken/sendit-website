@@ -9,8 +9,7 @@ nav_order: 1
 
 ## Features
 
-<div class="d-none d-md-block float-right ml-3 mb-3" style="width: 300px;"><a href="/assets/SendIt Rev C Assembled.jpg"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid"></a></div>
-<div class="d-block d-md-none mb-3"><a href="/assets/SendIt Rev C Assembled.jpg"><img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-fluid w-100"></a></div>
+<img src="/assets/SendIt Rev C Assembled.jpg" alt="SendIt Board Assembled" class="img-main">
 
 - ESP32-S3 module with WiFi and USB-C  
 - Powered by USB-C or 12–30 V DC external input, with onboard power regulation
@@ -83,7 +82,7 @@ Resistive senders are commonly used as tank level sensors for water and fuel tan
 1. Wire your resistor between **+VOLTAGE** and **SIGNAL**
 1. Wire your sender between **SIGNAL** and **GROUND**
 
-After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **10k Pullup**, then use a calibration table to map ohm readings to your desired unit (e.g., percentage or liters).
+After wiring, set the [software Input Type](/docs/software/configuration#input-type) to **Raw Output**, then use a calibration table to map voltage readings to your desired unit (e.g., percentage or liters).
 
 ### Positive Switching
 
